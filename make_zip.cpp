@@ -3,6 +3,9 @@
 #include <vector>
 #include <queue>
 
+
+#include "./zipios/zipios/zipfile.hpp"
+
 #ifdef __unix__
 #include<unistd.h>
 #endif
