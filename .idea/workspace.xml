@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6fd04bee-190f-428f-8ec0-d82919b41f9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Backup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SETTINGS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_zip.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios-2.2.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/AUTHORS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/COPYING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/NEWS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/TODO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/cmake/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/cmake/FindCatch.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/cmake/ZipIosConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/contrib/zipios.spec.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/changelog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/compat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/control" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/copyright" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/docs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/libzipios-dev.install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/libzipios-doc.install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/libzipios.install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/debian/rules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/check" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/coverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/pack" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/spaces.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/todo.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/upload-website" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/dev/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/appnote-with-many-extensions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/images/zipfile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/images/zipios++.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/images/zipios.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/images/zipios_square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/www/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/zip-format.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/doc/zipios.doxy.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/backbuffer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/backbuffer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/collectioncollection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/deflateoutputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/deflateoutputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/directorycollection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/directoryentry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/dosdatetime.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filecollection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/fileentry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filepath.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filterinputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filterinputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filteroutputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/filteroutputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/gzipoutputstream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/gzipoutputstream.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/gzipoutputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/gzipoutputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/inflateinputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/inflateinputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/virtualseeker.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipcentraldirectoryentry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipcentraldirectoryentry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipendofcentraldirectory.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipendofcentraldirectory.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipfile.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipinputstream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipinputstream.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipinputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipinputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipios_common.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipios_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/ziplocalentry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/ziplocalentry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipoutputstream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipoutputstream.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipoutputstreambuf.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/src/zipoutputstreambuf.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/backbuffer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/collectioncollection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/common.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/directory_helper.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/directorycollection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/directoryentry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/dosdatetime.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/filepath.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/raii_helper.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/stream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/tests.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/tests.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/virtualseeker.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tests/zipfile.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tools/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tools/appendzip.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tools/dosdatetime.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tools/zipios.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/tools/zipios_example.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/collectioncollection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/directorycollection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/directoryentry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/dosdatetime.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/filecollection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/fileentry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/filepath.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/virtualseeker.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/zipfile.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/zipios-config.hpp.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipios/zipios/zipiosexceptions.hpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1n88QhOhTwC0qCaVbnWvpKNxliW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Backup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Backup" />
+      <module name="STUBS_core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Backup" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6fd04bee-190f-428f-8ec0-d82919b41f9f" name="Default Changelist" comment="" />
+      <created>1610760342582</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610760342582</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
