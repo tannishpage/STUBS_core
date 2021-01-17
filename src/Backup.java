@@ -1,44 +1,50 @@
-/**
- * Will go through the backup process. It will take a list of given folders/files to backup, and will go through them,
- * creating zip a archive. This file is not concerend with what happens to the zip file.
- * (I.e. sent through the network, etc).
- *
- * This file would need, a zip library, and a library that can walk all the sub directories of a given directory.
- */
 import java.io.*;
 import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-
+/**
+ * Will go through the backup process. It will take a list of given folders/files to backup, and will go through them,
+ * creating zip a archive. This file is not concerend with what happens to the zip file.
+ * (I.e. sent through the network, etc).
+ */
 public class Backup {
-
-/*    public static void main(String[] args) throws IOException {
+  /* public static void main(String[] args) throws IOException {
         Backup.create_backup(new String[] {"C:\\Users\\punug\\Desktop\\", "C:\\Users\\punug\\Pictures\\", "C:\\Users\\punug\\Documents\\", "C:\\Users\\punug\\Downloads\\"}, "D:\\Backup_test");
     } */
 
-    public static void create_backup(String[] list, String bkp_destination) throws IOException {
+    public static void create_backup(String[] list, String bkpDestination) throws IOException {
         Backup b = new Backup();
-        File bkp_directory = new File(bkp_destination);
-        bkp_directory.mkdir();
-        for (String dir : list) {
-            System.out.print("Backing Up " + dir + "...");
-            File backupFolder = new File(dir);
-            String folder_destination = bkp_directory.getAbsolutePath() + File.separator + backupFolder.getName() + ".zip";
-            List<File> walk = b.walkDirectory(backupFolder);
-            b.make_zip(walk, folder_destination, dir);
+        File bkpDirectory = new File(bkpDestination);
+        if (bkpDirectory.mkdir()){
+            for (String dir : list) {
+                System.out.print("Backing Up " + dir + "...");
+                File backupFolder = new File(dir);
+                String folder_destination = bkpDirectory.getAbsolutePath() + File.separator + backupFolder.getName() + ".zip";
+                List<File> walk = b.walkDirectory(backupFolder);
+                b.make_zip(walk, folder_destination, dir);
+                System.out.println("Done");
+            }
+            System.out.print("Creating single archive...");
+            List<File> walk = b.walkDirectory(bkpDirectory);
+            b.make_zip(walk, bkpDirectory.getParent() + File.separator + bkpDirectory.getName() + ".zip", bkpDirectory.getAbsolutePath() + File.separator);
             System.out.println("Done");
+            System.out.print("Cleaning up...");
+            if (b.cleanUp(bkpDirectory)) {
+                System.out.println("Done");
+            } else {
+                System.out.println("Failed");
+                System.out.println("Couldn't clean up backup destination. Manually remove.");
+            }
+        } else {
+            System.out.println("Failed to create backup. Could not make directory in given location");
         }
-        System.out.print("Creating single archive...");
-        List<File> walk = b.walkDirectory(bkp_directory);
-        b.make_zip(walk, bkp_directory.getParent() + File.separator + bkp_directory.getName() + ".zip", bkp_directory.getAbsolutePath() + File.separator);
-        System.out.println("Done");
     }
 
-    private boolean make_zip(List<File> files_to_add, String zip_destination, String removeFromPath) throws IOException {
-        FileOutputStream fos = new FileOutputStream(zip_destination);
+    private void make_zip(List<File> filesToAdd, String zipDestination, String removeFromPath) throws IOException {
+        FileOutputStream fos = new FileOutputStream(zipDestination);
         ZipOutputStream zipOut = new ZipOutputStream(fos);
-        for (File f : files_to_add){
+        for (File f : filesToAdd){
             if (f.isDirectory()){
                 if(f.getName().endsWith(File.separator)){
                     zipOut.putNextEntry(new ZipEntry(f.getAbsolutePath().replace(removeFromPath, "")));
@@ -61,8 +67,19 @@ public class Backup {
         }
         zipOut.close();
         fos.close();
+    }
 
-        return true;
+    private boolean cleanUp(File bkpDirectory){
+        File[] files = bkpDirectory.listFiles();
+        if (files == null){
+            return false;
+        }
+        for (File f : files){
+            if (!f.delete()){
+                return false;
+            }
+        }
+        return bkpDirectory.delete();
     }
 
     private List<File> walkDirectory(File start){
