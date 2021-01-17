@@ -16,7 +16,7 @@ public class Backup {
 /*    public static void main(String[] args) throws IOException {
         Backup.create_backup(new String[] {"C:\\Users\\punug\\Desktop\\", "C:\\Users\\punug\\Pictures\\", "C:\\Users\\punug\\Documents\\", "C:\\Users\\punug\\Downloads\\"}, "D:\\Backup_test");
     } */
-    
+
     public static void create_backup(String[] list, String bkp_destination) throws IOException {
         Backup b = new Backup();
         File bkp_directory = new File(bkp_destination);
