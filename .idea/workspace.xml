@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fd04bee-190f-428f-8ec0-d82919b41f9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Backup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SETTINGS" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/make_zip.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STUBS_core/Backup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/STUBS_core/Backup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zipios-2.2.0.tar.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zipios/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zipios/AUTHORS" beforeDir="false" />
