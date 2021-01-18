@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="STUBS_core:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/STUBS_core_jar</output-path>
+    <root id="archive" name="STUBS_core.jar">
+      <element id="module-output" name="STUBS_core" />
+    </root>
+  </artifact>
+</component>
