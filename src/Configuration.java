@@ -9,13 +9,13 @@ import java.util.*;
  */
 public class Configuration {
     private final Properties properties;
-    private final String ConfigName = ".." + File.separator + "SETTINGS";
+    private final String configName = ".." + File.separator + "SETTINGS";
     private boolean loaded = false;
 
     public Configuration() {
         properties = new Properties();
         try {
-            properties.load(new FileInputStream(ConfigName));
+            properties.load(new FileInputStream(configName));
             loaded = true;
         } catch (IOException e){
             e.printStackTrace();
@@ -160,6 +160,10 @@ public class Configuration {
 
     public void setBackupNameFormat(String value) {
         properties.setProperty("BACKUPNAMEFORMAT", value);
+    }
+
+    public void saveProperties() throws IOException {
+        properties.store(new FileOutputStream(this.configName), "Formatting Instructions: hh = hours, mm = minutes, ss = seconds, dd = days, MM = months, yy or yyyy = year");
     }
 
     public boolean isLoaded() {
