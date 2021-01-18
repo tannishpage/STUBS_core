@@ -1,7 +1,6 @@
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
 
 /**
@@ -9,7 +8,7 @@ import java.util.*;
  */
 public class Configuration {
     private final Properties properties;
-    private final String configName = ".." + File.separator + "SETTINGS";
+    private final String configName = "SETTINGS";
     private boolean loaded = false;
 
     public Configuration() {
@@ -160,6 +159,18 @@ public class Configuration {
 
     public void setBackupNameFormat(String value) {
         properties.setProperty("BACKUPNAMEFORMAT", value);
+    }
+
+    public String getBackupDestination() {
+        String value = properties.getProperty("BACKUPDESTINATION");
+        if (value.equals("")){
+            return ".";
+        }
+        return value;
+    }
+
+    public void setBackupDestination(String value) {
+        properties.setProperty("BACKUPDESTINATION", value);
     }
 
     public void saveProperties() throws IOException {

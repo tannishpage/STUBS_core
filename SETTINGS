@@ -1,8 +1,10 @@
 #test
 #Sun Jan 17 19:37:50 AEST 2021
 PORT=5000
-BACKUPNAMEFORMAT=Backup_Desktop_{dd/MM/yyyy}_{hh:mm:ss}
-THINGSTOBACKUP=/Users/tannishpage/Documents;/Users/tannishpage/Downloads;/Users/tannishpage/Pictures;/Users/tannishpage/Desktop
+BACKUPNAMEFORMAT=Backup_Desktop_{ddMMyyyy}_{hhmmss}
+#If blank will save backup to the current destination
+BACKUPDESTINATION=D:\\
+THINGSTOBACKUP=C:\\Users\\punug\\Desktop\\;C:\\Users\\punug\\Pictures\\;C:\\Users\\punug\\Documents\\;C:\\Users\\punug\\Downloads\\
 KEEPBACKUPFILE=false
 SERVERADDR=192.168.0.16
 REMOTETRANSFER=true
