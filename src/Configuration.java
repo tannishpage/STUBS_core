@@ -1,4 +1,7 @@
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
 
 /**
@@ -19,29 +22,61 @@ public class Configuration {
         }
     }
 
-  /* public static void main (String[] args) throws IOException {
-        Configuration conf = new Configuration();
-        if (conf.networkTransfer()) {
+    /* public static void main (String[] args) throws IOException {
+           Configuration conf = new Configuration();
+          if (conf.networkTransfer()) {
 
-        }
-        Properties p = new Properties();
-        p.load(new FileInputStream("C:\\Users\\punug\\Documents\\STUBS_core\\SETTINGS"));
-        Set propertiesEntrySet = p.entrySet();
-        Iterator it = propertiesEntrySet.iterator();
-        //while (it.hasNext()){
-            //Map.Entry e = (Map.Entry) it.next();
-            //System.out.println(e.getKey() + " = " + e.getValue());
-        //}
+          }
+          Properties p = new Properties();
+          p.load(new FileInputStream("C:\\Users\\punug\\Documents\\STUBS_core\\SETTINGS"));
+          Set propertiesEntrySet = p.entrySet();
+          Iterator it = propertiesEntrySet.iterator();
+          //while (it.hasNext()){
+              //Map.Entry e = (Map.Entry) it.next();
+              //System.out.println(e.getKey() + " = " + e.getValue());
+          //}
 
 
-        String[] files = p.getProperty("THINGSTOBACKUP").split(File.pathSeparator);
-        for (int i = 0; i <= files.length - 1; i++){
-            System.out.println(files[i]);
-        }
-        //p.setProperty("SERVERADDR", "192.168.0.16");
-        //p.store(new FileOutputStream("C:\\Users\\punug\\Documents\\STUBS_core\\SETTINGS"), "test");
+          String[] files = p.getProperty("THINGSTOBACKUP").split(File.pathSeparator);
+          for (int i = 0; i <= files.length - 1; i++){
+              System.out.println(files[i]);
+          }
+          //p.setProperty("SERVERADDR", "192.168.0.16");
+          //p.store(new FileOutputStream("C:\\Users\\punug\\Documents\\STUBS_core\\SETTINGS"), "test")
+       Configuration conf = new Configuration();
+       String s = "Backup_Desktop_{ddMMyyyy}_{hhmmss}";
+       String[] b = conf.processFormatters(s);
+       for (String a : b) {
+           //System.out.println(a);
+           DateTimeFormatter dtf = DateTimeFormatter.ofPattern(a.substring(1, a.length() - 1));
+           LocalDateTime now = LocalDateTime.now();
+           s = s.replace(a, now.format(dtf));
+           //System.out.println(now.format(dtf));
+       }
+       System.out.println(s);
+       //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyy");
+       //LocalDateTime now = LocalDateTime.now();
+       //System.out.println(now.format(dtf));
     } */
 
+    private String[] processFormatters(String s) {
+        boolean haveFormatter = true;
+        List<String> formatters = new ArrayList<>();
+        int prevStart = 0;
+        int start;
+        int end;
+        while (haveFormatter) {
+            start = s.indexOf("{", prevStart);
+            if (start == -1) {
+                haveFormatter = false;
+                continue;
+            }
+            end = s.indexOf("}", start);
+            prevStart = start + 1;
+            formatters.add(s.substring(start, end + 1));
+        }
+        return formatters.toArray(new String[0]);
+    }
     public String[] getThingsToBackup () {
         return properties.getProperty("THINGSTOBACKUP").split(File.pathSeparator);
     }
@@ -109,11 +144,18 @@ public class Configuration {
 
     public String backupNameFormat() {
         String value = properties.getProperty("BACKUPNAMEFORMAT");
-        //  --------------- TODO ----------------
-        //  Here I'd like to come up with a formatting system or just use a standard one.
-        //  I'd like to allow the user to have the time and date in the file name.
-
-        return value + "_Backup";
+        String[] formatters = this.processFormatters(value);
+        if (formatters.length == 0) {
+            return value;
+        }
+        for (String formatter : formatters) {
+            //System.out.println(a);
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern(formatter.substring(1, formatter.length() - 1));
+            LocalDateTime now = LocalDateTime.now();
+            value = value.replace(formatter, now.format(dtf));
+            //System.out.println(now.format(dtf));
+        }
+        return value;
     }
 
     public void setBackupNameFormat(String value) {
